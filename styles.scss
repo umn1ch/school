@@ -9,6 +9,11 @@ html, body {
     padding: 0;
 }
 
+h2 {
+    font-size: 50px;
+    letter-spacing: 2px;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -22,16 +27,20 @@ button {
 }
 
 .top-bar {
-    background-color: #2c3e50;
+    background-color: #1b1a2f;
     color: white;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     padding: 10px 20px;
     font-size: 14px;
+
+    & i {
+        padding-right: 10px;    
+    }
+    
     
     & .language-switch img {
-        width: 24px;
-        height: 16px;
         margin-left: 10px;
     }
 
@@ -43,17 +52,25 @@ button {
 
 nav {
     background-color: rgba(252, 240, 3, 0.1);
-    position: absolute;
+    position: absolute; /* fixed вместо absolute, чтобы nav был всегда сверху */
+    top: 37;
+    left: 0;
     width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 10px 20px;
     height: 106px;
-
+    z-index: 1000; /* Достаточно высокий z-index, чтобы быть поверх слайдера */
 
     & .logo img {
-        height: 50px;
+        height: 100px; /* Удвоенная высота */
+        width: auto;  /* Ширина автоматически, чтобы сохранить соотношение сторон */
+    }
+
+    & ul {
+        display: flex;
+        list-style: none;
     }
 
     & ul li {
@@ -62,16 +79,19 @@ nav {
 
     & ul li a {
         text-decoration: none;
-        color: #2c3e50;
+        color: #fff;
         font-weight: bold;
+        text-transform: uppercase;
+        font-family: Rubik;
+        font-weight: 500;
     }
 
     & ul li a.active {
-        color: #e74c3c;
+        color: #e4181f;
     }
 
     & ul li a:hover {
-        color: #e41811;
+        color: #e4181f;
     }
 
     & a, a:hover, a:focus {
@@ -80,11 +100,13 @@ nav {
 }
 
 
+
 // SWIPER
 
 .swiper-container {
     width: 100%;
-    height: auto; 
+    height: auto;
+    position: relative;
 }
 
 .swiper-slide {
@@ -92,58 +114,109 @@ nav {
     display: flex !important;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .swiper-slide img {
     width: 100%;
-    height: auto; 
-    object-fit: cover; 
+    height: auto;
+    object-fit: cover;
 }
 
-.swiper-pagination-bullet:hover {
-    --swiper-pagination-bullet-width: 10px;
-    --swiper-pagination-bullet-height: 10px;
-    --swiper-pagination-color: #e4181f !important;
-}
-
-.swiper-pagination-bullet-active {
-    --swiper-pagination-bullet-width: 10px;
-    --swiper-pagination-bullet-height: 10px;
-    --swiper-pagination-color: #e4181f;
-    --swiper-pagination-border-radius: 4px;
+.swiper-pagination {
+    position: absolute;
+    bottom: 50px !important;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    width: auto;
+    white-space: nowrap;
 }
 
 .swiper-pagination-bullet {
-    --swiper-pagination-bullet-width: 10px;
-    --swiper-pagination-bullet-height: 10px;
+    width: 10px !important;
+    height: 10px !important;
+    background: rgba(255, 255, 255, 0.3) !important;
+    opacity: 1 !important;
+    margin: 0 10px; /* Добавляем отступ между элементами пагинации */
 }
 
-.swiper-pagination { // ЕБАТЬ Я КОСТЫЛЬ СДЕЛАЛ
-    position: fixed;
-    padding-bottom: 4%;
+.swiper-pagination-bullet-active {
+    background: #e4181f !important;
+    opacity: 1 !important;
+}
+
+.swiper-pagination-bullet:hover {
+    background: #e4181f !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #000;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 100%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    padding: 0 10px;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background-color: #e4181f;
+    color: #fff;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 25px !important;
+    color: #fff;
+    font-weight: 500;
 }
 
 .swiper-text {
     position: absolute;
-    // color: #fff; 
-    //TODO TEMPORARILY BLACK
-    color: #000;
+    display: flex;
+    justify-content: center;
+    color: #fff;
     font-weight: 700;
-    font-size: 36px;
-    line-height: 42px;
+    font-size: calc(36px + 1.5vw);
+    font-size: calc(42px + 1.5vw);
     z-index: 100;
     top: 35%;
+    width: 100%;
     font-family: Roboto;
 }
 
 .basic-button {
-    background-color:#2c3e50;
+    background-color: #2c3e50;
     color: #fff;
     text-transform: uppercase;
 }
 
+.basic-button:hover {
+    background-color: #e4181f;
+}
+
+.basic-button:active {
+    box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, inset 5px 5px 15px 5px rgba(0,0,0,0);
+}
+
+.button-container {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 65%;
+}
+
 .apply-button {
-    position: fixed;
+    position: relative;
+    cursor: pointer;
     height: 58px;
     width: 130px;
     border-radius: 4px;
@@ -152,7 +225,130 @@ nav {
     align-items: center;
     font-weight: 500;
     font-family: Rubik;
-    top: 50%;
-    
     z-index: 25;
+}
+// бля я пока не хочу прикасаться к той хуйне что выше
+
+// VIDEO SECTION
+.video {
+    margin: 130px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & video {
+        padding: 0 15px;
+    }
+
+    & img {
+        padding: 0 15px;
+    }
+}
+
+// ADVANTAGES 
+.advantages {
+    font-family: Poppins;
+    color: #333146;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1240px;
+    margin: auto;
+    margin-bottom: 130px;
+
+    & i {
+        font-size: 60px;
+    }
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.advantages-card {
+    box-shadow: 0px 0px 90px 0px rgba(47, 47, 47, 0.1);
+    text-align: center;
+    position: relative;
+    padding: 50px 40px 40px;
+}
+
+.card-container:nth-of-type(odd) .advantages-card {
+    border-radius: 40px 0px 40px 0px;
+}
+
+.card-container:nth-of-type(even) .advantages-card {
+    border-radius: 0px 40px 0px 40px;
+}
+
+.advantages-card::before {
+    height: 2px;
+    width: 90%;
+    left: 0;
+    background: #1b1a2f;
+    bottom: 0;
+    position: absolute;
+    content: "";
+    transition: all 0.3s ease-in-out;
+}
+
+.advantages-card:hover {
+    color: #e4181f;
+    transition: all 0.3s ease-in-out;
+}
+
+.advantages-card:hover::before {
+    background: #e4181f;
+}
+
+#second-card::before {
+    left:auto;
+    right: 0;
+    background: #e4181f;
+}
+
+#second-card {
+    & i {
+        color: #e4181f;
+    }
+}
+
+.card-container {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+    padding: 0 15px;
+}
+
+.card-title {
+    font-weight: 700;
+    font-size: 25px;
+    padding: 0px;
+    line-height: 34px;
+}
+
+.card-description {
+    font-size: 15px;
+    font-weight: 300;
+    padding-top: 15px;
+    margin: 0;
+    color: #6a7a83;
+    font-family: Rubik;
+}
+
+// COURSES
+.courses {
+    font-family: Poppins;
+    color: #333146;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1240px;
+    margin: auto;
+    padding: 130px 0 80px;
+    background: #f6f8fa;
+    position: relative;
+    z-index: 1;
 }
