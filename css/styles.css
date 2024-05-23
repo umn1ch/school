@@ -421,14 +421,13 @@ nav a, nav a:hover, nav a:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; /* Добавлено для переносов */
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -webkit-box-align: start;
       -ms-flex-align: start;
-          align-items: flex-start; /* Изменено */
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap; /* Добавлено */
-  height: auto;
+          align-items: flex-start;
 }
 
 .course-card {
@@ -450,10 +449,18 @@ nav a, nav a:hover, nav a:focus {
   padding-bottom: 50px;
   background: #fff;
 }
-.course-card .course-link {
+
+.image-wrapper {
+  width: 100%;
+  overflow: hidden; /* Обрезаем выходящее изображение */
+}
+
+.course-link {
+  display: block;
   width: 100%;
 }
-.course-card img {
+
+.course-card-image {
   width: 100%;
   -webkit-transform: scale(1) rotate(0deg);
       -ms-transform: scale(1) rotate(0deg);
@@ -461,14 +468,14 @@ nav a, nav a:hover, nav a:focus {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-.course-card img:hover {
+
+.course-card-image:hover {
   -webkit-transform: scale(1.1) rotate(4deg);
       -ms-transform: scale(1.1) rotate(4deg);
           transform: scale(1.1) rotate(4deg);
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
 }
-.course-card .courses-info {
+
+.courses-info {
   width: calc(100% - 2rem);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -484,7 +491,8 @@ nav a, nav a:hover, nav a:focus {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.course-card .courses-title {
+
+.courses-title {
   color: #323232;
   font-weight: 700;
   -webkit-transition: all 0.3s ease-in-out;
@@ -492,7 +500,8 @@ nav a, nav a:hover, nav a:focus {
   font-size: 20px;
   margin-top: 15px;
 }
-.course-card .courses-more-button {
+
+.courses-more-button {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -508,7 +517,8 @@ nav a, nav a:hover, nav a:focus {
   text-transform: uppercase;
   margin-top: 15px;
 }
-.course-card .courses-button {
+
+.courses-button {
   text-decoration: none;
   padding: 0 20px;
   color: #fff;

@@ -359,12 +359,10 @@ nav {
     max-width: 1240px;
     margin: auto;
     display: flex;
+    flex-wrap: wrap; /* Добавлено для переносов */
     justify-content: space-around;
-    align-items: flex-start; /* Изменено */
-    flex-wrap: wrap; /* Добавлено */
-    height: auto;
+    align-items: flex-start;
 }
-
 
 .course-card {
     flex: 0 0 30%; /* Уменьшаем ширину карточек */
@@ -375,55 +373,60 @@ nav {
     align-items: center;
     padding-bottom: 50px;
     background: #fff;
+}
 
-    & .course-link {
-        width: 100%;
-    }
+.image-wrapper {
+    width: 100%;
+    overflow: hidden; /* Обрезаем выходящее изображение */
+}
 
-    & img {
-        width: 100%;
-        transform: scale(1) rotate(0deg);
-        transition: all 0.3s ease-in-out;
-    }
+.course-link {
+    display: block;
+    width: 100%;
+}
 
-    & img:hover {
-        transform: scale(1.1) rotate(4deg);
-        transition: all 0.3s ease-in-out;
-    }
+.course-card-image {
+    width: 100%;
+    transform: scale(1) rotate(0deg);
+    transition: all 0.3s ease-in-out;
+}
 
-    & .courses-info {
-        width: calc(100% - 2rem);
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: space-between;
-    }
+.course-card-image:hover {
+    transform: scale(1.1) rotate(4deg);
+}
 
-    & .courses-title {
-        color: #323232;
-        font-weight: 700;
-        transition: all 0.3s ease-in-out;
-        font-size: 20px;
-        margin-top: 15px;
-    }
+.courses-info {
+    width: calc(100% - 2rem);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
 
-    & .courses-more-button {
-        width: 100%;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        font-size: 12px;
-        line-height: 36px;
-        text-transform: uppercase;
-        margin-top: 15px;
-    }
+.courses-title {
+    color: #323232;
+    font-weight: 700;
+    transition: all 0.3s ease-in-out;
+    font-size: 20px;
+    margin-top: 15px;
+}
 
-    & .courses-button {
-        text-decoration: none;
-        padding: 0 20px;
-        color: #fff;
-        background: #e4181f;
-        font-weight: 500;
-        font-family: Rubik;
-    }
+.courses-more-button {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 12px;
+    line-height: 36px;
+    text-transform: uppercase;
+    margin-top: 15px;
+}
+
+.courses-button {
+    text-decoration: none;
+    padding: 0 20px;
+    color: #fff;
+    background: #e4181f;
+    font-weight: 500;
+    font-family: Rubik;
 }
