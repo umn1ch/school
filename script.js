@@ -1,3 +1,5 @@
+
+// SWIPER - можно не трогать, можно оставить толкьо инициализацию, как по кайфу
 document.addEventListener('DOMContentLoaded', function () {
     // Инициализация Swiper
     var swiper = new Swiper('.swiper-container', {

@@ -214,7 +214,7 @@ nav a, nav a:hover, nav a:focus {
 }
 
 .basic-button {
-  background-color: #2c3e50;
+  background-color: rgb(27, 26, 47);
   color: #fff;
   text-transform: uppercase;
 }
@@ -241,6 +241,9 @@ nav a, nav a:hover, nav a:focus {
       -ms-flex-align: center;
           align-items: center;
   top: 65%;
+}
+.button-container a {
+  text-decoration: none;
 }
 
 .apply-button {
@@ -393,6 +396,10 @@ nav a, nav a:hover, nav a:focus {
 .courses {
   font-family: Poppins;
   color: #333146;
+  padding: 130px 0 80px;
+  background: #f6f8fa;
+  position: relative;
+  z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -406,10 +413,106 @@ nav a, nav a:hover, nav a:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.courses-container {
   max-width: 1240px;
   margin: auto;
-  padding: 130px 0 80px;
-  background: #f6f8fa;
-  position: relative;
-  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start; /* Изменено */
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; /* Добавлено */
+  height: auto;
+}
+
+.course-card {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 30%;
+          flex: 0 0 30%; /* Уменьшаем ширину карточек */
+  max-width: 30%; /* Уменьшаем максимальную ширину */
+  margin: 50px 15px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 50px;
+  background: #fff;
+}
+.course-card .course-link {
+  width: 100%;
+}
+.course-card img {
+  width: 100%;
+  -webkit-transform: scale(1) rotate(0deg);
+      -ms-transform: scale(1) rotate(0deg);
+          transform: scale(1) rotate(0deg);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.course-card img:hover {
+  -webkit-transform: scale(1.1) rotate(4deg);
+      -ms-transform: scale(1.1) rotate(4deg);
+          transform: scale(1.1) rotate(4deg);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.course-card .courses-info {
+  width: calc(100% - 2rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.course-card .courses-title {
+  color: #323232;
+  font-weight: 700;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  font-size: 20px;
+  margin-top: 15px;
+}
+.course-card .courses-more-button {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 12px;
+  line-height: 36px;
+  text-transform: uppercase;
+  margin-top: 15px;
+}
+.course-card .courses-button {
+  text-decoration: none;
+  padding: 0 20px;
+  color: #fff;
+  background: #e4181f;
+  font-weight: 500;
+  font-family: Rubik;
 }
