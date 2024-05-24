@@ -30,6 +30,111 @@ button {
     cursor: pointer;
 }
 
+.floating-container {
+    position: fixed;
+    bottom: 50px;
+    right: 30px;
+    z-index: 100000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.whatsapp-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    & i {
+        margin-top: 4px;
+    }
+}
+
+.whatsapp-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #25D366; 
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    color: white;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.whatsapp-button i {
+    font-size: 24px;
+}
+
+.whatsapp-button:hover {
+    background-color: #1ebe57;
+}
+
+.whatsapp-text-bubble {
+    background-color: white;
+    border-radius: 5px;
+    padding: 7px 15px;
+    box-shadow: rgb(0 0 0 / 10%) 2px 2px 13px;
+    position: absolute;
+    left: -120px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(226, 226, 226);
+}
+
+.whatsapp-text {
+    font-size: 16px;
+    color: black;
+}
+
+.whatsapp-text-bubble:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -8px;
+    transform: translateY(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent white;
+    filter: drop-shadow(0 0 10px rgba(0,0,0,0.1));
+}
+
+.scroll-to-top {
+    opacity: 0;
+    visibility: hidden;
+    background-color: #e4181f; 
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scroll-to-top i {
+    font-size: 24px;
+}
+
+.scroll-to-top:hover {
+    background-color: #1b1a2f;
+    transition: all 0.3s ease-in-out;
+}
+
+.scroll-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
 .top-bar {
     background-color: #1b1a2f;
     color: white;
@@ -56,7 +161,7 @@ button {
 
 nav {
     background-color: rgba(252, 240, 3, 0.1);
-    position: absolute; /* fixed вместо absolute, чтобы nav был всегда сверху */
+    position: absolute; 
     top: 37;
     left: 0;
     width: 100%;
@@ -65,11 +170,11 @@ nav {
     align-items: center;
     padding: 10px 20px;
     height: 106px;
-    z-index: 1000; /* Достаточно высокий z-index, чтобы быть поверх слайдера */
+    z-index: 1000; 
 
     & .logo img {
-        height: 100px; /* Удвоенная высота */
-        width: auto;  /* Ширина автоматически, чтобы сохранить соотношение сторон */
+        height: 100px; 
+        width: auto; 
     }
 
     & ul {
@@ -142,7 +247,7 @@ nav {
     height: 10px !important;
     background: rgba(255, 255, 255, 0.3) !important;
     opacity: 1 !important;
-    margin: 0 10px; /* Добавляем отступ между элементами пагинации */
+    margin: 0 10px; 
 }
 
 .swiper-pagination-bullet-active {
@@ -773,4 +878,155 @@ label i {
 .start-button:hover {
     background-color: #1b1a2f;
     transition: 0.3s ease-in-out;
+}
+
+// FOOTER 
+footer {
+    position: relative;
+    width: 100%;
+    background-color: #1b1a2f;
+    color: #fff;
+    padding: 40px 20px;
+    background-image: url('/source/images/footer-shape-1.png');
+    background-size: cover;
+    background-position-y: bottom;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+
+    & p a {
+        text-decoration: none;
+        color: #e4181f;
+        font-weight: 500;
+    }
+}
+
+.footer-column:not(:first-child) {
+    margin-left: 100px;
+}
+
+.footer-column img {
+    width: 150px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-links li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.footer-logo {
+    max-width: 100%;
+    height: auto;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer-column address, .footer-column p {
+    margin-bottom: 10px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #e4181f;
+}
+
+.footer-social {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-social a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.footer i {
+    padding-right: 10px;
+}
+
+.footer-social a:hover {
+    color: #e4181f;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-bottom a {
+    color: #e4181f;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+.footer-shapes {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.footer-shapes img {
+    width: 100%;
+}
+
+@media (max-width: 991px) {
+    .footer-container {
+        flex-wrap: wrap;
+    }
+    .footer-column {
+        flex: 0 0 48%;
+        max-width: 48%;
+    }
+}
+
+@media (max-width: 767px) {
+    .footer-column {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
 }

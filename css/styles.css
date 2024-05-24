@@ -1,4 +1,3 @@
-@charset "UTF-8";
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
@@ -35,6 +34,149 @@ button {
   cursor: pointer;
 }
 
+.floating-container {
+  position: fixed;
+  bottom: 50px;
+  right: 30px;
+  z-index: 100000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  gap: 10px;
+}
+
+.whatsapp-container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.whatsapp-container i {
+  margin-top: 4px;
+}
+
+.whatsapp-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #25D366;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  color: white;
+  text-decoration: none;
+  -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
+.whatsapp-button i {
+  font-size: 24px;
+}
+
+.whatsapp-button:hover {
+  background-color: #1ebe57;
+}
+
+.whatsapp-text-bubble {
+  background-color: white;
+  border-radius: 5px;
+  padding: 7px 15px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 2px 2px 13px;
+          box-shadow: rgba(0, 0, 0, 0.1) 2px 2px 13px;
+  position: absolute;
+  left: -120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid rgb(226, 226, 226);
+}
+
+.whatsapp-text {
+  font-size: 16px;
+  color: black;
+}
+
+.whatsapp-text-bubble:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -8px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent white;
+  -webkit-filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.1));
+          filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.1));
+}
+
+.scroll-to-top {
+  opacity: 0;
+  visibility: hidden;
+  background-color: #e4181f;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  color: white;
+  cursor: pointer;
+  -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  -webkit-transition: opacity 0.3s ease, visibility 0.3s ease;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.scroll-to-top i {
+  font-size: 24px;
+}
+
+.scroll-to-top:hover {
+  background-color: #1b1a2f;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.scroll-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
 .top-bar {
   background-color: #1b1a2f;
   color: white;
@@ -62,7 +204,7 @@ button {
 
 nav {
   background-color: rgba(252, 240, 3, 0.1);
-  position: absolute; /* fixed вместо absolute, чтобы nav был всегда сверху */
+  position: absolute;
   top: 37;
   left: 0;
   width: 100%;
@@ -76,11 +218,11 @@ nav {
           align-items: center;
   padding: 10px 20px;
   height: 106px;
-  z-index: 1000; /* Достаточно высокий z-index, чтобы быть поверх слайдера */
+  z-index: 1000;
 }
 nav .logo img {
-  height: 100px; /* Удвоенная высота */
-  width: auto; /* Ширина автоматически, чтобы сохранить соотношение сторон */
+  height: 100px;
+  width: auto;
 }
 nav ul {
   display: -webkit-box;
@@ -154,7 +296,7 @@ nav a, nav a:hover, nav a:focus {
   height: 10px !important;
   background: rgba(255, 255, 255, 0.3) !important;
   opacity: 1 !important;
-  margin: 0 10px; /* Добавляем отступ между элементами пагинации */
+  margin: 0 10px;
 }
 
 .swiper-pagination-bullet-active {
@@ -966,4 +1108,191 @@ label i {
   background-color: #1b1a2f;
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+  background-color: #1b1a2f;
+  color: #fff;
+  padding: 40px 20px;
+  background-image: url("/source/images/footer-shape-1.png");
+  background-size: cover;
+  background-position-y: bottom;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.footer-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.footer-column {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 200px;
+  margin: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.footer-column p a {
+  text-decoration: none;
+  color: #e4181f;
+  font-weight: 500;
+}
+
+.footer-column:not(:first-child) {
+  margin-left: 100px;
+}
+
+.footer-column img {
+  width: 150px;
+}
+
+.footer-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer-links li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer-logo {
+  max-width: 100%;
+  height: auto;
+}
+
+.footer-column h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.footer-column address, .footer-column p {
+  margin-bottom: 10px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #e4181f;
+}
+
+.footer-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+.footer-social a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.footer i {
+  padding-right: 10px;
+}
+
+.footer-social a:hover {
+  color: #e4181f;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer-bottom a {
+  color: #e4181f;
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+.footer-shapes {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.footer-shapes img {
+  width: 100%;
+}
+
+@media (max-width: 991px) {
+  .footer-container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .footer-column {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 48%;
+            flex: 0 0 48%;
+    max-width: 48%;
+  }
+}
+@media (max-width: 767px) {
+  .footer-column {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    max-width: 100%;
+  }
 }
