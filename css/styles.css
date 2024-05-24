@@ -869,7 +869,7 @@ nav a, nav a:hover, nav a:focus {
   }
 }
 .blur {
-  background-image: url("../source/images/counter-bg.jpg");
+  background-image: url('../source/images/counter-bg.jpg');
   background-size: cover;
   background-position: center;
   height: 100%;
@@ -1375,7 +1375,7 @@ footer {
   background-color: #1b1a2f;
   color: #fff;
   padding: 40px 20px;
-  background-image: url("../source/images/footer-shape-1.png");
+  background-image: url('../source/images/footer-shape-1.png');
   background-size: cover;
   background-position-y: bottom;
   display: -webkit-box;
