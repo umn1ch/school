@@ -1,7 +1,7 @@
 const languages = {
     "en": {
     "write-to-us": "Write to us",
-    "top-bar-address": "44, J.Jabbarli Street, Caspian Plaza 1, 4th Floor Baku, Azerbaijan",
+        "top-bar-address": "1, Fikret Amirov Street Baku Azerbaijan",
     "top-bar-schedule": "Mon-Sat 09:00-21:00",
     "nav-home": "Home Page",
     "nav-gallery": "Gallery",
@@ -50,7 +50,7 @@ const languages = {
     "book-store": "Book Store",
     "start-now-start": "Start now and turn your knowledge into a profitable online course",
     "start-now-get-started": "Get started now",
-    "footer-address": "44, J.Jabbarli Street, Caspian Plaza 1, 4th Floor Baku, Azerbaijan",
+        "footer-address": "1, Fikret Amirov Street Baku Azerbaijan",
     "footer-popular-courses": "Popular Courses",
     "footer-en-courses": "English Courses",
     "footer-az-courses": "Azerbaijani Courses",
@@ -68,7 +68,7 @@ const languages = {
 },
 "ru": {
     "write-to-us": "Напишите нам",
-    "top-bar-address": "44, ул. Дж. Джаббарлы, Каспий Плаза 1, 4-й этаж, Баку, Азербайджан",
+    "top-bar-address": "Улица Фикрет Амирова 1, Баку Азербайджан",
     "top-bar-schedule": "Пн-Сб 09:00-21:00",
     "nav-home": "Главная страница",
     "nav-gallery": "Галерея",
@@ -117,7 +117,7 @@ const languages = {
     "book-store": "Книжный магазин",
     "start-now-start": "Начните сейчас и превратите свои знания в прибыльный онлайн-курс",
     "start-now-get-started": "Начать сейчас",
-    "footer-address": "44, ул. Дж. Джаббарлы, Каспий Плаза 1, 4-й этаж, Баку, Азербайджан",
+    "footer-address": "Улица Фикрет Амирова 1, Баку Азербайджан",
     "footer-popular-courses": "Популярные курсы",
     "footer-en-courses": "Курсы английского языка",
     "footer-az-courses": "Курсы азербайджанского языка",
@@ -135,7 +135,7 @@ const languages = {
 },
 "az": {
     "write-to-us": "Bizə yazın",
-    "top-bar-address": "44, C.Cabbarlı küç., Xəzər Plaza 1, 4-cü mərtəbə, Bakı, Azərbaycan",
+    "top-bar-address": "Fikrət Əmirov küçəsi 1, Bakı Azərbaycan",
     "top-bar-schedule": "B.e.-Şənbə 09:00-21:00",
     "nav-home": "Ana Səhifə",
     "nav-gallery": "Qalereya",
@@ -184,7 +184,7 @@ const languages = {
     "book-store": "Kitab Mağazası",
     "start-now-start": "İndi başlayın və biliklərinizi mənfəətli onlayn kursa çevirin",
     "start-now-get-started": "İndi başlayın",
-    "footer-address": "44, C.Cabbarlı küç., Xəzər Plaza 1, 4-cü mərtəbə, Bakı, Azərbaycan",
+    "footer-address": "Fikrət Əmirov küçəsi 1, Bakı Azərbaycan",
     "footer-popular-courses": "Populyar Kurslar",
     "footer-en-courses": "İngilis Dili Kursları",
     "footer-az-courses": "Azərbaycan Dili Kursları",
