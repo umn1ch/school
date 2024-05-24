@@ -363,14 +363,14 @@ nav {
     max-width: 1240px;
     margin: auto;
     display: flex;
-    flex-wrap: wrap; /* Добавлено для переносов */
+    flex-wrap: wrap; 
     justify-content: space-around;
     align-items: flex-start;
 }
 
 .course-card {
-    flex: 0 0 30%; /* Уменьшаем ширину карточек */
-    max-width: 30%; /* Уменьшаем максимальную ширину */
+    flex: 0 0 30%; 
+    max-width: 30%;
     margin: 50px 15px 0;
     display: flex;
     flex-direction: column;
@@ -381,7 +381,7 @@ nav {
 
 .image-wrapper {
     width: 100%;
-    overflow: hidden; /* Обрезаем выходящее изображение */
+    overflow: hidden; 
 }
 
 .course-link {
@@ -578,4 +578,199 @@ label i {
     font-size: 20px;
     line-height: 40px;
     color: #fff;
+}
+
+// NEWS
+.latest-news {
+    font-family: Poppins;
+    color: #333146;
+    padding: 130px 0 80px;
+    background: #fff;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.news-container {
+    max-width: 1240px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.news-card {
+    flex: 0 0 30%; 
+    max-width: 30%;
+    margin: 50px 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+    background: #fff;
+    box-shadow: 0px 0px 60px 0px rgba(47, 47, 47, 0.1);
+}
+
+.image-wrapper {
+    width: 100%;
+    overflow: hidden; 
+}
+
+.news-link {
+    display: block;
+    width: 100%;
+}
+
+.news-card-image {
+    width: 100%;
+    transform: scale(1) rotate(0deg);
+    transition: all 0.3s ease-in-out;
+}
+
+.news-card-image:hover {
+    transform: scale(1.1) rotate(4deg);
+}
+
+.news-info {
+    width: calc(100% - 2rem);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.news-title {
+    color: #323232;
+    font-weight: 700;
+    transition: all 0.3s ease-in-out;
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+.news-description {
+    margin-top: 10px;
+    color: #666;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.news-more-button {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 12px;
+    line-height: 36px;
+    text-transform: uppercase;
+    margin-top: 15px;
+}
+
+.news-button {
+    text-decoration: none;
+    padding: 0 20px;
+    color: #fff;
+    background: #e4181f;
+    font-weight: 500;
+    font-family: Rubik;
+}
+
+// BOOKS 
+.books {
+    font-family: Poppins;
+    color: #333146;
+    padding: 130px 0 80px;
+    background: #fff;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.draggable {
+    position: absolute;
+    right: 25%;
+    top: 27%;
+}
+
+.swiper {
+    max-width: 1240px;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.books-swiper .swiper-slide img {
+    display: block;
+    width: 90%;
+    height: auto;
+    object-fit: cover;
+}
+
+// START NOW
+.start-now {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Poppins;
+    color: #333146;
+    font-weight: 700;
+
+    & h2 {
+        letter-spacing: normal;
+        font-size: 36px;
+        line-height: 54px;
+        padding-bottom: 50px;
+        text-align: center;
+    }
+
+    & img {
+        width: 100%;
+    }
+
+    & a {
+        text-decoration: none;
+    }
+}
+
+.start-wrapper {
+    max-width: 800px;
+    padding-bottom: 100px;
+}
+
+.start-button {
+    font-size: 14px;
+    line-height: 60px;
+    font-family: Rubik;
+    padding: 0 45px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+    border-radius: 5px;
+    background-color: #e4181f;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.start-button:hover {
+    background-color: #1b1a2f;
+    transition: 0.3s ease-in-out;
 }
