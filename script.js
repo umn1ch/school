@@ -63,23 +63,38 @@ async function loadTranslations() {
     }
 }
 
-function switchLanguage(language, translations) {
-    const elements = document.querySelectorAll('[id]');
-    elements.forEach(element => {
-        const id = element.id;
-        if (translations[language][id]) {
-            element.textContent = translations[language][id];
+// function switchLanguage(language, translations) {
+//     const elements = document.querySelectorAll('[id]');
+//     console.log(elements);
+//     elements.forEach(element => {
+//         const id = element.id;
+//         if (translations[language][id]) {
+//             element.textContent = translations[language][id];
+//         }
+//     });
+// }
+
+// document.getElementById('az').addEventListener('click', () => switchLanguage('az', translations));
+// document.getElementById('en').addEventListener('click', () => switchLanguage('en', translations));
+// document.getElementById('ru').addEventListener('click', () => switchLanguage('ru', translations));
+
+// let translations;
+
+// loadTranslations().then(data => {
+//     translations = data;
+//     switchLanguage('en', translations); 
+// });
+
+document.getElementById('az').addEventListener('click', () => translate('az'));
+document.getElementById('en').addEventListener('click', () => translate('en'));
+document.getElementById('ru').addEventListener('click', () => translate('ru'));
+
+let translate = (language) => {
+    let currentLanguage = languages[language];
+    Object.keys(currentLanguage).forEach(key => {
+        const element = document.getElementById(key);
+        if (element) {
+            element.textContent = currentLanguage[key];
         }
     });
-}
-
-document.getElementById('az').addEventListener('click', () => switchLanguage('az', translations));
-document.getElementById('en').addEventListener('click', () => switchLanguage('en', translations));
-document.getElementById('ru').addEventListener('click', () => switchLanguage('ru', translations));
-
-let translations;
-
-loadTranslations().then(data => {
-    translations = data;
-    switchLanguage('en', translations); 
-});
+} 
