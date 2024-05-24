@@ -52,6 +52,16 @@ button {
   gap: 10px;
 }
 
+@media screen and (max-width: 1149px) {
+  .floating-container {
+    right: 6%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .floating-container {
+    right: 2%;
+  }
+}
 .whatsapp-container {
   position: relative;
   display: -webkit-box;
@@ -202,6 +212,50 @@ button {
   margin-right: 20px;
 }
 
+@media screen and (max-width: 1149px) {
+  .top-bar {
+    padding: 5px 10px;
+  }
+  .top-bar ul li {
+    margin-right: 5px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .top-bar {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-top: 15px;
+  }
+  .top-bar ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .top-bar ul li {
+    padding-bottom: 5px;
+  }
+  .contact-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 nav {
   background-color: rgba(252, 240, 3, 0.1);
   position: absolute;
@@ -252,6 +306,34 @@ nav a, nav a:hover, nav a:focus {
   transition: all 0.3s ease-in-out;
 }
 
+@media screen and (max-width: 1149px) {
+  nav {
+    padding: 5px 10px;
+  }
+  nav .logo img {
+    height: 60px;
+  }
+}
+@media screen and (max-width: 991px) {
+  nav {
+    font-size: 14px;
+    padding: 5px 0;
+  }
+  nav .logo img {
+    height: 40px;
+  }
+  nav ul li:not(:last-child) {
+    margin-right: 10px;
+  }
+  nav ul li:last-child {
+    margin-right: 0px;
+  }
+}
+@media screen and (max-width: 767px) {
+  nav {
+    display: none;
+  }
+}
 .swiper-container {
   width: 100%;
   height: auto;
@@ -341,6 +423,14 @@ nav a, nav a:hover, nav a:focus {
   font-weight: 500;
 }
 
+.swiper-button-next::after {
+  margin-left: 3px;
+}
+
+.swiper-button-prev::after {
+  margin-right: 3px;
+}
+
 .swiper-text {
   position: absolute;
   display: -webkit-box;
@@ -412,6 +502,36 @@ nav a, nav a:hover, nav a:focus {
   z-index: 25;
 }
 
+@media screen and (max-width: 1149px) {
+  .swiper-text {
+    font-size: calc(32px + 1.5vw);
+  }
+  .apply-button {
+    height: 45px;
+    width: 110px;
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .swiper-text {
+    font-size: calc(28px + 1.5vw);
+  }
+  .apply-button {
+    height: 40px;
+    width: 100px;
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .swiper-container {
+    width: auto;
+    height: 100%;
+  }
+  .swiper-slide img {
+    width: auto;
+    height: 50%;
+  }
+}
 .video {
   margin: 130px 0;
   display: -webkit-box;
@@ -426,11 +546,36 @@ nav a, nav a:hover, nav a:focus {
 }
 .video video {
   padding: 0 15px;
+  width: 590px;
 }
 .video img {
   padding: 0 15px;
 }
 
+@media screen and (max-width: 1149px) {
+  .video {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .video video {
+    padding: 25px 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .video {
+    width: 90%;
+  }
+  .video video {
+    width: 100%;
+    margin-left: 10%;
+  }
+  .video img {
+    width: 100%;
+    margin-left: 10%;
+  }
+}
 .advantages {
   font-family: Poppins;
   color: #333146;
@@ -455,6 +600,11 @@ nav a, nav a:hover, nav a:focus {
   font-size: 60px;
 }
 
+@media screen and (max-width: 1149px) {
+  .advantages {
+    max-width: 90%;
+  }
+}
 .cards-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -539,6 +689,21 @@ nav a, nav a:hover, nav a:focus {
   font-family: Rubik;
 }
 
+@media screen and (max-width: 767px) {
+  .cards-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .card-container {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    max-width: 100%;
+    padding: 10px 0;
+  }
+}
 .courses {
   font-family: Poppins;
   color: #333146;
@@ -694,6 +859,14 @@ nav a, nav a:hover, nav a:focus {
   transition: all 0.3s ease-in-out;
 }
 
+@media screen and (max-width: 767px) {
+  .course-card {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 90%;
+            flex: 0 0 90%;
+    max-width: 90%;
+  }
+}
 .blur {
   background-image: url("/source/images/counter-bg.jpg");
   background-size: cover;
@@ -861,7 +1034,7 @@ label i {
           flex-direction: column;
   -webkit-box-align: start;
       -ms-flex-align: start;
-          align-items: start;
+          align-items: flex-start;
 }
 
 .stat-number {
@@ -876,6 +1049,36 @@ label i {
   color: #fff;
 }
 
+@media screen and (max-width: 1149px) {
+  .info-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .info-form {
+    width: 60% !important;
+    margin-right: 0 !important;
+  }
+  .info-content {
+    max-width: 75%;
+    -webkit-filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.6));
+            filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.6));
+  }
+}
+@media screen and (max-width: 767px) {
+  .info-content {
+    padding: 70px 10px;
+  }
+  .stat-item {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
 .latest-news {
   font-family: Poppins;
   color: #333146;
@@ -1019,6 +1222,14 @@ label i {
   font-family: Rubik;
 }
 
+@media screen and (max-width: 767px) {
+  .news-card {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 90%;
+            flex: 0 0 90%;
+    max-width: 90%;
+  }
+}
 .books {
   font-family: Poppins;
   color: #333146;
@@ -1075,6 +1286,19 @@ label i {
      object-fit: cover;
 }
 
+@media screen and (max-width: 1149px) {
+  .swiper {
+    max-width: 90%;
+  }
+  .books-swiper .swiper-slide img {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .books-swiper .swiper-slide img {
+    width: 100%;
+  }
+}
 .start-now {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1329,5 +1553,10 @@ footer {
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
     max-width: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
+  h2 {
+    text-align: center;
   }
 }

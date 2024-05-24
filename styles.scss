@@ -41,6 +41,18 @@ button {
     gap: 10px;
 }
 
+@media screen and (max-width: 1149px) {
+    .floating-container {
+        right: 6%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .floating-container {
+        right: 2%;
+    }
+}
+
 .whatsapp-container {
     position: relative;
     display: flex;
@@ -158,6 +170,40 @@ button {
     }
 }
 
+@media screen and (max-width: 1149px) {
+    .top-bar {
+        padding: 5px 10px;
+    }
+    
+    .top-bar ul li {
+        margin-right: 5px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .top-bar {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        flex-direction: column;
+        padding-top: 15px;
+
+        & ul {
+            flex-direction: column;
+        }
+
+        & ul li {
+            padding-bottom: 5px;
+        }
+    }
+    .contact-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
 
 nav {
     background-color: rgba(252, 240, 3, 0.1);
@@ -205,6 +251,41 @@ nav {
 
     & a, a:hover, a:focus {
         transition: all 0.3s ease-in-out;
+    }
+}
+
+@media screen and (max-width: 1149px) {
+    nav {
+        padding: 5px 10px;
+    }
+    
+    nav .logo img {
+        height: 60px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    nav {
+        font-size: 14px;
+        padding: 5px 0;
+
+        & .logo img {
+            height: 40px;
+        }
+
+        & ul li:not(:last-child) {
+            margin-right: 10px;
+        }
+
+        & ul li:last-child {
+            margin-right: 0px;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    nav {
+        display: none;
     }
 }
 
@@ -286,6 +367,14 @@ nav {
     font-weight: 500;
 }
 
+.swiper-button-next::after {
+    margin-left: 3px;
+}
+
+.swiper-button-prev::after {
+    margin-right: 3px;
+}
+
 .swiper-text {
     position: absolute;
     display: flex;
@@ -340,7 +429,42 @@ nav {
     font-family: Rubik;
     z-index: 25;
 }
-// бля я пока не хочу прикасаться к той хуйне что выше
+
+@media screen and (max-width: 1149px) {
+    .swiper-text {
+        font-size: calc(32px + 1.5vw);
+    }
+
+    .apply-button {
+        height: 45px;
+        width: 110px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .swiper-text {
+        font-size: calc(28px + 1.5vw);
+    }
+
+    .apply-button {
+        height: 40px;
+        width: 100px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .swiper-container {
+        width: auto;
+        height: 100%;
+    }
+
+    .swiper-slide img {
+        width: auto;
+        height: 50%;
+    }
+}
 
 // VIDEO SECTION
 .video {
@@ -351,10 +475,37 @@ nav {
 
     & video {
         padding: 0 15px;
+        width: 590px;
     }
 
     & img {
         padding: 0 15px;
+    }
+}
+
+@media screen and (max-width: 1149px) {
+    .video {
+        flex-direction: column;
+
+        & video {
+            padding: 25px 0;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .video {
+        width: 90%;
+
+        & video {
+            width: 100%;
+            margin-left: 10%;
+        }
+
+        & img {
+            width: 100%;
+            margin-left: 10%;
+        }
     }
 }
 
@@ -372,6 +523,12 @@ nav {
 
     & i {
         font-size: 60px;
+    }
+}
+
+@media screen and (max-width: 1149px) {
+    .advantages {
+        max-width: 90%;
     }
 }
 
@@ -448,6 +605,18 @@ nav {
     margin: 0;
     color: #6a7a83;
     font-family: Rubik;
+}
+
+@media screen and (max-width: 767px) {
+    .cards-container {
+        flex-direction: column;
+    }
+    
+    .card-container {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 10px 0;
+    }
 }
 
 // COURSES
@@ -555,6 +724,13 @@ nav {
 .courses-button:hover {
     background: #1b1a2f;
     transition: all 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 767px) {
+    .course-card {
+        flex: 0 0 90%;
+        max-width: 90%;
+    }
 }
 
 // FORM SECTION
@@ -699,7 +875,7 @@ label i {
     text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
 }
 
 .stat-number {
@@ -713,6 +889,34 @@ label i {
     line-height: 40px;
     color: #fff;
 }
+
+@media screen and (max-width: 1149px) {
+    .info-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-form {
+        width: 60% !important;
+        margin-right: 0 !important;
+    }
+
+    .info-content {
+        max-width: 75%;
+        filter: drop-shadow(0 0 1px rgba(0,0,0,0.6));
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .info-content {
+        padding: 70px 10px;
+    }
+
+    .stat-item {
+        align-items: center;
+    }
+}
+
 
 // NEWS
 .latest-news {
@@ -812,6 +1016,13 @@ label i {
     font-family: Rubik;
 }
 
+@media screen and (max-width: 767px) {
+    .news-card {
+        flex: 0 0 90%;
+        max-width: 90%;
+    }
+}
+
 // BOOKS 
 .books {
     font-family: Poppins;
@@ -851,6 +1062,23 @@ label i {
     width: 90%;
     height: auto;
     object-fit: cover;
+}
+
+@media screen and (max-width: 1149px) {
+
+    .swiper {
+        max-width: 90%;
+    }
+
+    .books-swiper .swiper-slide img {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .books-swiper .swiper-slide img {
+        width: 100%;
+    }
 }
 
 // START NOW
@@ -1058,5 +1286,11 @@ footer {
     .footer-column {
         flex: 0 0 100%;
         max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    h2 {
+        text-align: center;
     }
 }
