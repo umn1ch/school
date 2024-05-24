@@ -51,3 +51,35 @@ var swiper = new Swiper(".books-swiper", {
         disableOnInteraction: false,
     },
   });
+
+// LANGUAGE CHANGE
+async function loadTranslations() {
+    try {
+        const response = await fetch('languages.json');
+        return await response.json();
+    } catch (error) {
+        console.error('Error loading translations:', error);
+        return null;
+    }
+}
+
+function switchLanguage(language, translations) {
+    const elements = document.querySelectorAll('[id]');
+    elements.forEach(element => {
+        const id = element.id;
+        if (translations[language][id]) {
+            element.textContent = translations[language][id];
+        }
+    });
+}
+
+document.getElementById('az').addEventListener('click', () => switchLanguage('az', translations));
+document.getElementById('en').addEventListener('click', () => switchLanguage('en', translations));
+document.getElementById('ru').addEventListener('click', () => switchLanguage('ru', translations));
+
+let translations;
+
+loadTranslations().then(data => {
+    translations = data;
+    switchLanguage('en', translations); 
+});

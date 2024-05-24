@@ -207,6 +207,7 @@ button {
 }
 .top-bar .language-switch img {
   margin-left: 10px;
+  cursor: pointer;
 }
 .top-bar ul li {
   margin-right: 20px;

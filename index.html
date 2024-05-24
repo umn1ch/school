@@ -23,7 +23,7 @@
                 <i class="fi fi-brands-whatsapp"></i>
             </a>
             <div class="whatsapp-text-bubble">
-                <span class="whatsapp-text">Write to us</span>
+                <span class="whatsapp-text" id="write-to-us">Write to us</span>
             </div>
         </div>
     </div>
@@ -41,11 +41,11 @@
                     </li>
                     <li>
                         <i class="fi fi-sr-marker"></i>
-                        44, J.Jabbarli Street, Caspian Plaza 1, 4th Floor Baku, Azerbaijan
+                        <span id="top-bar-address">44, J.Jabbarli Street, Caspian Plaza 1, 4th Floor Baku, Azerbaijan</span>
                     </li>
                     <li>
                         <i class="fi fi-sr-clock-five"></i>
-                        Mon-Sat 09:00-21:00
+                        <span id="top-bar-schedule">Mon-Sat 09:00-21:00</span>
                     </li>
                 </ul>
             </div>
@@ -60,14 +60,14 @@
                 <img src="source/images/logo brand.png" alt="Logo">
             </div>
             <ul>
-                <li><a href="#" class="active">Home Page</a></li>
-                <li><a href="#">Gallery</a></li>
-                <li><a href="#">Studying Abroad</a></li>
-                <li><a href="#">Book Store</a></li>
-                <li><a href="#">Courses</a></li>
-                <li><a href="#">Tests</a></li>
-                <li><a href="#">Information</a></li>
-                <li><a href="#">More</a></li>
+                <li><a href="#" class="active" id="nav-home">Home Page</a></li>
+                <li><a href="#" id="nav-gallery">Gallery</a></li>
+                <li><a href="#" id="nav-abroad">Studying Abroad</a></li>
+                <li><a href="#" id="nav-store">Book Store</a></li>
+                <li><a href="#" id="nav-courses">Courses</a></li>
+                <li><a href="#" id="nav-tests">Tests</a></li>
+                <li><a href="#" id="nav-info">Information</a></li>
+                <li><a href="#" id="nav-more">More</a></li>
             </ul>
         </nav>
     </header>
@@ -81,16 +81,16 @@
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <img src="source/images/slider_1.png" alt="Slide 1">
-                    <div class="text-slide-1 swiper-text">Learn languages and connect with the world</div>
+                    <div class="text-slide-1 swiper-text" id="swiper-learn">Learn languages and connect with the world</div>
                     <div class="button-container">
-                        <a href="#apply"><div class="basic-button apply-button">Apply</div></a>
+                        <a href="#apply"><div class="basic-button apply-button" id="swiper-apply1">Apply</div></a>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <img src="source/images/slider_2.png" alt="Slide 2">
-                    <div class="text-slide-2 swiper-text">Become a global citizen with multi-language</div>
+                    <div class="text-slide-2 swiper-text" id="swiper-global">Become a global citizen with multi-language</div>
                     <div class="button-container">
-                        <a href="#apply"><div class="basic-button apply-button">Apply</div></a>
+                        <a href="#apply"><div class="basic-button apply-button" id="swiper-apply2">Apply</div></a>
                     </div>
                 </div>
             </div>
@@ -111,27 +111,27 @@
                     ADVANTAGES
         ======================== -->
         <section class="advantages">
-            <h2>Our advantages</h2>
+            <h2 id="advantages">Our advantages</h2>
             <div class="cards-container">
                 <div class="card-container">
                     <div class="advantages-card">
                         <i class="fi fi-tr-lesson"></i>
-                        <div class="card-title">100% Effective</div>
-                        <div class="card-description">You will be taught by the best translators in English language courses</div>
+                        <div class="card-title" id="advantages-effective">100% Effective</div>
+                        <div class="card-description" id="advantages-translators">You will be taught by the best translators in English language courses</div>
                     </div>
                 </div>
                 <div class="card-container">
                     <div class="advantages-card" id="second-card">
                         <i class="fi fi-rr-clock"></i>
-                        <div class="card-title">Intensive course</div>
-                        <div class="card-description">Opportunity to study according to the accelerated method of Kifayat Ahmad gizi without homework</div>
+                        <div class="card-title" id="advantages-course">Intensive course</div>
+                        <div class="card-description" id="advantages-opportunity">Opportunity to study according to the accelerated method of Kifayat Ahmad gizi without homework</div>
                     </div>
                 </div>
                 <div class="card-container">
                     <div class="advantages-card">
                         <i class="fi fi-tr-student-alt"></i>
-                        <div class="card-title">Textbooks</div>
-                        <div class="card-description">There is a wide range of additional materials and resources for our students</div>
+                        <div class="card-title" id="advantages-textbooks">Textbooks</div>
+                        <div class="card-description" id="advantages-range">There is a wide range of additional materials and resources for our students</div>
                     </div>
                 </div>
             </div>  
@@ -140,7 +140,7 @@
         POPULAR COURSES
         ====================== -->
         <section class="courses">
-            <h2>Our Popular Courses</h2>
+            <h2 id="popular-courses">Our Popular Courses</h2>
             <div class="courses-container">
                 <div class="course-card">
                     <div class="image-wrapper">
@@ -149,9 +149,9 @@
                         </a>
                     </div>
                     <div class="courses-info">
-                        <div class="courses-title"><a href="" class="courses-link">English Courses Hekimler Ucun</a></div>
+                        <div class="courses-title"><a href="" class="courses-link" id="courses-en">English Courses Hekimler Ucun</a></div>
                         <div class="courses-more-button">
-                            <a href="" class="courses-button">More</a>
+                            <a href="" class="courses-button" id="courses-more1">More</a>
                         </div>
                     </div>
                 </div>
@@ -162,9 +162,9 @@
                         </a>
                     </div>
                     <div class="courses-info">
-                        <div class="courses-title"><a href="" class="courses-link">Azerbaijani Courses</a></div>
+                        <div class="courses-title"><a href="" class="courses-link" id="courses-az">Azerbaijani Courses</a></div>
                         <div class="courses-more-button">
-                            <a href="" class="courses-button">More</a>
+                            <a href="" class="courses-button" id="courses-more2">More</a>
                         </div>
                     </div>
                 </div>
@@ -175,9 +175,9 @@
                         </a>
                     </div>
                     <div class="courses-info">
-                        <div class="courses-title"><a href="" class="courses-link">Russian Courses</a></div>
+                        <div class="courses-title"><a href="" class="courses-link" id="courses-ru">Russian Courses</a></div>
                         <div class="courses-more-button">
-                            <a href="" class="courses-button">More</a>
+                            <a href="" class="courses-button" id="courses-more3">More</a>
                         </div>
                     </div>
                 </div>
@@ -188,9 +188,9 @@
                         </a>
                     </div>
                     <div class="courses-info">
-                        <div class="courses-title"><a href="" class="courses-link">German Courses</a></div>
+                        <div class="courses-title"><a href="" class="courses-link" id="courses-de">German Courses</a></div>
                         <div class="courses-more-button">
-                            <a href="" class="courses-button">More</a>
+                            <a href="" class="courses-button" id="courses-more4">More</a>
                         </div>
                     </div>
                 </div>
@@ -201,9 +201,9 @@
                         </a>
                     </div>
                     <div class="courses-info">
-                        <div class="courses-title"><a href="" class="courses-link">Spanish Courses</a></div>
+                        <div class="courses-title"><a href="" class="courses-link" id="courses-sp">Spanish Courses</a></div>
                         <div class="courses-more-button">
-                            <a href="" class="courses-button">More</a>
+                            <a href="" class="courses-button" id="courses-more5">More</a>
                         </div>
                     </div>
                 </div>
@@ -214,9 +214,9 @@
                         </a>
                     </div>
                     <div class="courses-info">
-                        <div class="courses-title"><a href="" class="courses-link">French Courses</a></div>
+                        <div class="courses-title"><a href="" class="courses-link" id="courses-fr">French Courses</a></div>
                         <div class="courses-more-button">
-                            <a href="" class="courses-button">More</a>
+                            <a href="" class="courses-button" id="courses-more6">More</a>
                         </div>
                     </div>
                 </div>
@@ -229,7 +229,7 @@
         <div class="blur">
             <section class="info-section" id="apply">
                 <div class="info-form">
-                    <h2>Get free information</h2>
+                    <h2 id="apply-info">Get free information</h2>
                     <form action="https://kifayatahmadgizi.co.uk/apply" method="post">
                         <div class="form-group">
                             <label for="first-name">
@@ -256,28 +256,28 @@
                             </label>
                         </div>
                         <div class="button-wrapper">
-                            <button type="submit" class="basic-button">SEND</button>
+                            <button type="submit" class="basic-button" id="apply-send">SEND</button>
                         </div>
                     </form>
                 </div>
                 <div class="info-content">
-                    <h3>START SPEAKING <span class="highlight">FOREIGN LANGUAGE IN 48 HOURS</span></h3>
-                    <h2>WHY <span class="highlight">CHOOSE US?</span></h2>
-                    <p>
-                        <span class="highlight">"The Language House"</span> is a training center where studies are conducted by professional teachers, as well as native speakers. In our school you can appreciate a variety of services, which include various training programs considered for children and adults, for groups or one person at any level of proficiency – zero and medium.
+                    <h3  id="start-speaking">START SPEAKING <span class="highlight" id="start-speaking-foreign">FOREIGN LANGUAGE IN 48 HOURS</span></h3>
+                    <h2 id="why">WHY <span class="highlight" id="choose">CHOOSE US?</span></h2>
+                    <p id="info-description">
+                        <span class="highlight" id="language-house">"The Language House"</span> is a training center where studies are conducted by professional teachers, as well as native speakers. In our school you can appreciate a variety of services, which include various training programs considered for children and adults, for groups or one person at any level of proficiency – zero and medium.
                     </p>
                     <div class="stats">
                         <div class="stat-item">
                             <span class="stat-number">10</span>
-                            <span class="stat-label">Our books</span>
+                            <span class="stat-label" id="stats-books">Our books</span>
                         </div>
                         <div class="stat-item">
                             <span class="stat-number">94</span>
-                            <span class="stat-label">Programs & Courses</span>
+                            <span class="stat-label" id="stats-courses">Programs & Courses</span>
                         </div>
                         <div class="stat-item">
                             <span class="stat-number">30</span>
-                            <span class="stat-label">Years of Experience</span>
+                            <span class="stat-label" id="stats-experience">Years of Experience</span>
                         </div>
                     </div>
                 </div>
@@ -287,7 +287,7 @@
             LATEST NEWS
         ==================== -->
         <section class="latest-news">
-            <h2>Latest News</h2>
+            <h2 id="latest-news">Latest News</h2>
             <div class="news-container">
                 <div class="news-card">
                     <div class="image-wrapper">
@@ -296,11 +296,11 @@
                         </a>
                     </div>
                     <div class="news-info">
-                        <div class="news-title">Kifayat Ahmadgizi</div>
-                        <p class="news-description">Kifayat Ahmad Gizi Web Saytimiz yeni gorkemine qovusdu.Lorem Ipsum &nbsp; 
+                        <div class="news-title" id="news-title">Kifayat Ahmadgizi</div>
+                        <p class="news-description" id="news-description">Kifayat Ahmad Gizi Web Saytimiz yeni gorkemine qovusdu.Lorem Ipsum &nbsp; 
                             is simply dummy text of the printing and typesetting industry...</p>
                         <div class="news-more-button">
-                            <a href="" class="news-button">More</a>
+                            <a href="" class="news-button" id="courses-more7">More</a>
                         </div>
                     </div>
                 </div>
@@ -310,17 +310,8 @@
                 BOOKS
         ====================== -->
         <section class="books">
-            <h2>Book Store</h2>
+            <h2 id="book-store">Book Store</h2>
             <img src="source/images/draggable.gif" alt="" class="draggable">
-            <!-- <div class="books-swiper">
-                <div class="books-swiper-wrapper">
-                  <div class="books-swiper-slide"><img src="" alt=""></div>
-                  <div class="books-swiper-slide"><img src="" alt=""></div>
-                  <div class="books-swiper-slide"><img src="" alt=""></div>
-                  <div class="books-swiper-slide"><img src="" alt=""></div>
-                  <div class="books-swiper-slide"><img src="" alt=""></div>
-                </div>
-              </div> -->
               <div class="swiper books-swiper">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide"><img src="source/images/jp-book.png" alt=""></div>
@@ -338,8 +329,8 @@
         ====================== -->
         <section class="start-now">
             <div class="start-wrapper">
-                <h2>Start now and turn your knowledge into a profitable online course</h2>
-                <a href="#apply"><div class="start-button button-reverse">Get started now</div></a>
+                <h2 id="start-now-start">Start now and turn your knowledge into a profitable online course</h2>
+                <a href="#apply"><div class="start-button button-reverse" id="start-now-get-started">Get started now</div></a>
             </div>
             <img src="source/images/bottombanner.jpg" alt="">
         </section>
@@ -350,33 +341,33 @@
             <div class="footer-container">
                 <div class="footer-column">
                     <img src="source/images/logo brand.png" alt="Logo" class="footer-logo">
-                    <address>
+                    <address id="footer-address">
                         44, J.Jabbarli Street, Caspian Plaza 1,<br>
                         4th Floor Baku, Azerbaijan
                     </address>
                 </div>
                 <div class="footer-column">
-                    <h3>Popular Courses</h3>
+                    <h3 id="footer-popular-courses">Popular Courses</h3>
                     <ul class="footer-links">
-                        <li><a href="#"><i class="fi fi-rr-angle-double-small-right"></i>English Courses</a></li>
-                        <li><a href="#"><i class="fi fi-rr-angle-double-small-right"></i>Azerbaijani Courses</a></li>
-                        <li><a href="#"><i class="fi fi-rr-angle-double-small-right"></i>Russian Courses</a></li>
-                        <li><a href="#"><i class="fi fi-rr-angle-double-small-right"></i>German Courses</a></li>
-                        <li><a href="#"><i class="fi fi-rr-angle-double-small-right"></i>Spanish Courses</a></li>
+                        <li><a href="#" id="footer-en-courses"><i class="fi fi-rr-angle-double-small-right"></i>English Courses</a></li>
+                        <li><a href="#" id="footer-az-courses"><i class="fi fi-rr-angle-double-small-right"></i>Azerbaijani Courses</a></li>
+                        <li><a href="#" id="footer-ru-courses"><i class="fi fi-rr-angle-double-small-right"></i>Russian Courses</a></li>
+                        <li><a href="#" id="footer-de-courses"><i class="fi fi-rr-angle-double-small-right"></i>German Courses</a></li>
+                        <li><a href="#" id="footer-sp-courses"><i class="fi fi-rr-angle-double-small-right"></i>Spanish Courses</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h3>Information</h3>
+                    <h3 id="footer-info">Information</h3>
                     <ul class="footer-links">
-                        <li><a href="#"><i class="fi fi-rr-angle-double-small-right"></i>News</a></li>
-                        <li><a href="#"><i class="fi fi-rr-angle-double-small-right"></i>About us</a></li>
-                        <li><a href="#"><i class="fi fi-rr-angle-double-small-right"></i>Studies</a></li>
-                        <li><a href="#"><i class="fi fi-rr-angle-double-small-right"></i>Contact</a></li>
-                        <li><a href="#"><i class="fi fi-rr-angle-double-small-right"></i>Book Store</a></li>
+                        <li><a href="#" id="footer-news"><i class="fi fi-rr-angle-double-small-right"></i>News</a></li>
+                        <li><a href="#" id="footer-about"><i class="fi fi-rr-angle-double-small-right"></i>About us</a></li>
+                        <li><a href="#" id="footer-study"><i class="fi fi-rr-angle-double-small-right"></i>Studies</a></li>
+                        <li><a href="#" id="footer-contact"><i class="fi fi-rr-angle-double-small-right"></i>Contact</a></li>
+                        <li><a href="#" id="footer-book-store"><i class="fi fi-rr-angle-double-small-right"></i>Book Store</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h3>Contact us</h3>
+                    <h3 id="footer-contact">Contact us</h3>
                     <p>+994702260990</p>
                     <p><a href="mailto:info@kifayatahmadgizi.co.uk">info@kifayatahmadgizi.co.uk</a></p>
                     <div class="footer-social">
@@ -386,8 +377,8 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; Copyright 2024 Kifayat Ahmadgizi. All Rights Reserved.</p>
-                <p>This site is developed by <a href="https://t.me/umn1ch">umn1ch</a></p>
+                <p id="all-rr">&copy; Copyright 2024 Kifayat Ahmadgizi. All Rights Reserved.</p>
+                <p id="dev">This site is developed by <a href="https://t.me/umn1ch">umn1ch</a></p>
             </div>
             <div class="footer-shapes">
                 <img src="source/images/footer-2.png" alt="Decorative Shape">
