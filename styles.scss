@@ -742,7 +742,8 @@ nav {
     background-position: center;
     height: 100%;
     position: relative; /* Ensures the background covers the entire section */
-    background-color: rgba(0, 0, 0, 0.4); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.8);
+        /* Fallback color */
 }
 
 .info-section {
