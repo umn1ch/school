@@ -1039,10 +1039,17 @@ label i {
     align-items: center;
 }
 
-.draggable {
-    position: absolute;
-    right: 25%;
-    top: 27%;
+// .draggable {
+//     position: absolute;
+//     right: 25%;
+//     top: 27%;
+// }
+
+.gif-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 60%;
+    margin-bottom: 10px;
 }
 
 .swiper {
@@ -1061,8 +1068,8 @@ label i {
 
 .books-swiper .swiper-slide img {
     display: block;
-    width: 90%;
-    height: auto;
+    width: 40dvh;
+    height: 40dvh;
     object-fit: cover;
 }
 

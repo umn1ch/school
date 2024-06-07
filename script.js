@@ -50,6 +50,20 @@ var swiper = new Swiper(".books-swiper", {
         delay: 2500,
         disableOnInteraction: false,
     },
+    breakpoints: {
+        0 : {
+            slidesPerView: 1,
+        },
+        320: {
+            slidesPerView: 1,
+        },
+        768: {
+            slidesPerView: 2,
+        },
+        1150: {
+            slidesPerView: 3,
+        }
+    }
   });
 
 // LANGUAGE CHANGE
